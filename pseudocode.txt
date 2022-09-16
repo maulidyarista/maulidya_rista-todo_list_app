@@ -1,0 +1,17 @@
+STORE "list_task" AS STRING WITH ANY VALUE
+STORE "date" AS DATETIME
+PRINT "todo list"
+
+IF "list_task" IS FINISHED
+    STORE "ticked_list_task"
+    PRINT "todo list"
+ELSE
+    STORE "reset_date"
+
+WHILE "reset_date" IS FALSE
+    DO "ticked_list_task"
+
+PRINT "todo list"
+
+
+
